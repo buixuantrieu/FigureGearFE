@@ -1,0 +1,29 @@
+{
+  "sign up": "Đăng kí",
+  "user name": "Tên tài khoản",
+  "email": "Email",
+  "password": "Mật khẩu",
+  "confirm password": "Nhập lại mật khẩu",
+  "you already have an account": "Bạn đã có tài khoản?",
+  "submit": "Gửi",
+  "account registration successful": "Đăng ký tài khoản thành công!",
+  "please check your email to verify your account": "Vui lòng kiểm tra email để xác minh tài khoản của bạn.",
+  "Validator": {
+    "user name is required": "Tên tài khoản là bắt buộc!",
+    "email is required": "Email là bắt buộc!",
+    "password is required": "Mật khẩu là bắt buộc!",
+    "invalid email format": "Định dạng email không hợp lệ!",
+    "email must not exceed 100 characters": "Email không được vượt quá 100 ký tự!",
+    "password must not exceed 50 characters": "Mật khẩu không được vượt quá 50 ký tự!",
+    "passwords do not match": "Mật khẩu không khớp!",
+    "password is too weak": "Mật khẩu quá yếu!",
+    "strength": "Độ mạnh",
+    "weak": "Yếu",
+    "medium": "Trung bình",
+    "strong": "Khá",
+    "very strong": "Mạnh",
+    "very weak": "Rất yếu",
+    "email is already exist": "Email đã tồn tại!",
+    "user name is already exist": "Tên tài khoản đã tồn tại!"
+  }
+}
