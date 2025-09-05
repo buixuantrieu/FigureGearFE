@@ -5,6 +5,7 @@ import QueryProvider from "@/providers/query-provider";
 import { NextIntlProvider } from "@/providers/next-inl-provider";
 import { getLocale, getMessages } from "next-intl/server";
 import { Toaster } from "sonner";
+import { LoadingProvider } from "@/contexts/useLoading";
 
 export const metadata: Metadata = {
   title: "Figure Gear | Mô Hình Anime Chính Hãng Giá Tốt",
@@ -58,7 +59,9 @@ export default async function RootLayout({ children }: IRootLayoutProps) {
         <NextIntlProvider locale={locale} messages={messages}>
           <QueryProvider>
             <Toaster position="top-right" />
-            {children}
+            <LoadingProvider>
+              {children}
+            </LoadingProvider>
           </QueryProvider>
         </NextIntlProvider>
       </body>

@@ -1,13 +1,4 @@
 {
-  "sign up": "Đăng kí",
-  "user name": "Tên tài khoản",
-  "email": "Email",
-  "password": "Mật khẩu",
-  "confirm password": "Nhập lại mật khẩu",
-  "you already have an account": "Bạn đã có tài khoản?",
-  "submit": "Gửi",
-  "account registration successful": "Đăng ký tài khoản thành công!",
-  "please check your email to verify your account": "Vui lòng kiểm tra email để xác minh tài khoản của bạn.",
   "Validator": {
     "user name is required": "Tên tài khoản là bắt buộc!",
     "email is required": "Email là bắt buộc!",
@@ -17,13 +8,25 @@
     "password must not exceed 50 characters": "Mật khẩu không được vượt quá 50 ký tự!",
     "passwords do not match": "Mật khẩu không khớp!",
     "password is too weak": "Mật khẩu quá yếu!",
-    "strength": "Độ mạnh",
-    "weak": "Yếu",
-    "medium": "Trung bình",
-    "strong": "Khá",
-    "very strong": "Mạnh",
-    "very weak": "Rất yếu",
     "email is already exist": "Email đã tồn tại!",
-    "user name is already exist": "Tên tài khoản đã tồn tại!"
-  }
+    "user name is already exist": "Tên tài khoản đã tồn tại!",
+    "wrong username or password": "Sai tài khoản hoặc mật khẩu",
+    "account email not verified": "Tài khoản chưa xác nhận email"
+  },
+  "sign up": "Đăng kí",
+  "user name": "Tên tài khoản",
+  "email": "Email",
+  "password": "Mật khẩu",
+  "confirm password": "Nhập lại mật khẩu",
+  "you already have an account": "Bạn đã có tài khoản?",
+  "submit": "Gửi",
+  "account registration successful": "Đăng ký tài khoản thành công!",
+  "login successful": "Đăng nhập thành công!",
+  "please check your email to verify your account": "Vui lòng kiểm tra email để xác minh tài khoản của bạn.",
+  "forgot password": "Quên mật khẩu",
+  "sign in": "Đăng nhập",
+  "store": "Cửa hàng",
+  "community": "Cộng đồng",
+  "news": "Tin tức",
+  "about": "Giới thiệu"
 }

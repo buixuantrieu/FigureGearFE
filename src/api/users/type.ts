@@ -3,3 +3,7 @@ export interface IRegisterDTO {
   email: string;
   password: string;
 }
+export interface ILoginDTO {
+  userName: string;
+  password: string;
+}

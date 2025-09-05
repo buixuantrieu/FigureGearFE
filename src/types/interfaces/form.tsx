@@ -10,6 +10,15 @@ export interface IFormConfig {
   form: UseFormReturn<any>;
   formItems: IFormItem[];
   onSubmit: (data?: any) => void;
+  actions?: IFormAction[]
+}
+
+export interface IFormAction {
+  text: string;
+  type: "button" | "submit",
+  loading?: boolean,
+  disable?: boolean,
+  className?: string
 }
 
 export interface IFormItem {

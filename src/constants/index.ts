@@ -1,5 +1,4 @@
 // #region Auth Banner
-
 export const AUTH_BANNER_IMAGES = [
   {
     src: "/images/banner-auth/Kamado-Tanjirou.JPG",
@@ -26,14 +25,6 @@ export const AUTH_BANNER_IMAGES = [
                 xl:left-[27%] xl:w-[15%]`
   },
   {
-    src: "/images/banner-auth/Tokito-Muichiro.JPG",
-    alt: "Tokito-Muichiro",
-    className: `hidden top-[2%] -rotate-10 z-30
-                md:w-[33%] md:left-[73%] md:block
-                lg:left-[68%] lg:w-[19%] lg:-rotate-8
-                xl:left-[75%] xl:w-[15%]`
-  },
-  {
     src: "/images/banner-auth/Luffy.JPG",
     alt: "Luffy",
     className: `hidden top-[6%] z-10 rotate-4
@@ -47,6 +38,14 @@ export const AUTH_BANNER_IMAGES = [
                 xl:left-[63%] xl:-top-[4%] xl:w-[15%]`
   },
   {
+    src: "/images/banner-auth/Tokito-Muichiro.JPG",
+    alt: "Tokito-Muichiro",
+    className: `hidden top-[2%] -rotate-10 z-30
+                md:w-[33%] md:left-[73%] md:block
+                lg:left-[68%] lg:w-[19%] lg:-rotate-8
+                xl:left-[75%] xl:w-[15%]`
+  },
+  {
     src: "/images/banner-auth/Kochou-Shinobu.JPG",
     alt: "Kochou-Shinobu",
     className: `top-[12%] z-30 rotate-6 hidden
@@ -54,25 +53,47 @@ export const AUTH_BANNER_IMAGES = [
                 xl:left-[87%] xl:w-[17%]`
   }
 ]
-
 // #endregion
 
 //#region LocalStorage
-
 export const STORAGE_KEY = {
   APP_ID: "FigureGearId",
+  TOKEN: "FigureGearToken"
 };
-
 //#endregion
 
 //#region  Route
-
 export const ROUTES = {
-  USER: {},
+  USER: {
+    HOME: "/",
+    STORE: "/store",
+    COMMUNITY: "/community",
+    NEWS: "/news",
+    ABOUT: "/about"
+  },
   ADMIN: {},
   LOGIN: "/auth?mode=login",
-  REGISTER: "/auth?mode=register"
+  REGISTER: "/auth?mode=register",
+  NOT_FOUND: "/not-found"
 }
 
+export const HOME_NAVIGATION = [
+  {
+    label: "store",
+    url: ROUTES.USER.STORE
+  },
+  {
+    label: "community",
+    url: ROUTES.USER.COMMUNITY
+  },
+  {
+    label: "news",
+    url: ROUTES.USER.NEWS
+  },
+  {
+    label: "about",
+    url: ROUTES.USER.ABOUT
+  }
+]
 //#endregion
 

@@ -99,7 +99,7 @@ function FormLabel({ className, children, ...props }: FormLabelProps) {
     <Label
       data-slot="form-label"
       data-error={!!error}
-      className={cn("relative", props.required && "after:content-['*'] after:text-red-500 after:ml-[-4px]", "text-slate-950 font-[400] pb-1 text-[13px]", className)}
+      className={cn("relative", props.required && "after:content-['*'] after:text-red-500 after:ml-[-4px]", "text-slate-950 font-[500] pb-1 text-[13px]", className)}
       htmlFor={formItemId}
       {...props}
     >

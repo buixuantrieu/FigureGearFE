@@ -4,13 +4,16 @@ import { IDynamicFormProps } from "@/types/interfaces/form";
 import { forwardRef, Fragment, useMemo } from "react";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "../../ui/form";
 import InputPassword from "./input-password";
+import { Button } from "@/components/ui/button";
+import { useSafeTranslate } from "@/hooks/useSafeTranslate";
+import { Loader2 } from "lucide-react";
 
 const DynamicForm = forwardRef<HTMLDivElement, IDynamicFormProps>((props, ref) => {
-  const { formConfig: { form, formItems, onSubmit } } = props;
+  const { t } = useSafeTranslate();
+  const { formConfig: { form, formItems, onSubmit, actions } } = props;
   const renderFormItem = useMemo(() => {
     return formItems.map((item, index) => {
       const key = `${index}-form-item`;
-
       switch (item.formControlType) {
         case FormControlType.TextField:
           return (
@@ -34,21 +37,29 @@ const DynamicForm = forwardRef<HTMLDivElement, IDynamicFormProps>((props, ref) =
               )}
             />
           );
-
         case FormControlType.Component:
           return <Fragment key={key}>{item.component}</Fragment>;
-
         default:
           return <Fragment key={key} />;
       }
     });
   }, [formItems, form.control]);
 
+  const renderAction = useMemo(() => actions?.map((item, index) => {
+    return (
+      <Button disabled={item.disable || item.loading} className={cn("w-full")} key={`${index}-action`} type={item.type}>
+        {item.loading && <Loader2 className="animate-spin w-10 h-10 text-white" />}
+        {t(item.text)}
+      </Button>
+    )
+  }), [actions, t])
+
   return (
     <div ref={ref}>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           {renderFormItem}
+          {renderAction}
         </form>
       </Form>
     </div >
