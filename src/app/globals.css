@@ -59,7 +59,7 @@
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
+  --destructive: oklch(64.063% 0.18758 21.573);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
@@ -118,5 +118,121 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.box-shadow {
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.button-global {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 500;
+  gap: 8px;
+  font-size: 16;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.6s;
+}
+
+.button-global::before {
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: 0.6s;
+  mix-blend-mode: difference;
+}
+.button-global:hover::before {
+  transition-duration: 0.6s;
+  transform: translate(100%, -50%);
+  border-radius: 0;
+}
+.button-global:active {
+  transform: translate(5px, 5px);
+  transition-duration: 0.3s;
+}
+
+.button-global.button-disable {
+  background-color: gray !important;
+  color: white !important;
+}
+.button-global.button-disable::before {
+  display: none;
+}
+
+.button-global.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.button-global.cursor-progress {
+  cursor: progress;
+}
+
+@layer utilities {
+  @keyframes scaleGray {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+      filter: grayscale(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+      filter: grayscale(0);
+    }
+  }
+
+  .animate-scale-gray {
+    transform: scale(0);
+    filter: grayscale(100%);
+    animation: scaleGray 0.7s ease-out forwards;
+  }
+
+  .animation-delay-0 {
+    animation-delay: 0ms;
+  }
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+  .animation-delay-900 {
+    animation-delay: 900ms;
+  }
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
   }
 }
